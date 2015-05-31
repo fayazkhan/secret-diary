@@ -2,8 +2,8 @@
 """Fayaz's diary.
 
 Usage:
-  diary.py show <file>
-  diary.py write <file> [--message=<message>] [--create]
+  diary show <file>
+  diary write <file> [--message=<message>] [--create]
 
 Options:
   -h --help                       Show this screen.
