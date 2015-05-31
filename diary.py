@@ -18,7 +18,6 @@ import arrow
 from sqlalchemy_utils import ArrowType
 from docopt import docopt
 from sqlalchemy import create_engine, Column, UnicodeText
-from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
