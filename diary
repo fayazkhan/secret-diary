@@ -9,7 +9,7 @@ Options:
   -h --help                       Show this screen.
   --version                       Show version.
   -m MESSAGE --message=MESSAGE    Message to add.
-  --create                        Create tables if they don't exist.
+  -c --create                        Create tables if they don't exist.
 """
 from getpass import getpass
 import sys
