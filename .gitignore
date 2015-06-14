@@ -1,3 +1,6 @@
+.coverage
 *.db
+*.egg
 *.egg-info
+__pycache__
 *~
