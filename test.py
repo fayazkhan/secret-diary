@@ -31,5 +31,12 @@ def test_write_from_buffer():
     assert entry.content == 'helloworld'
 
 
-def test_main():
+@patch('diary.docopt', return_value={'<file>': 'test.db'})
+@patch('diary.getpass', return_value='password')
+@patch('diary.create_database_session')
+@patch('diary.show')
+def test_main_show(show, create_database_session, _):
+    session = create_database_session.return_value
     main()
+    create_database_session.assert_called_once_with('test.db', 'password')
+    show.assert_called_once_with(session)
