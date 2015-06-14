@@ -17,6 +17,7 @@ import sys
 import arrow
 from sqlalchemy_utils import ArrowType
 from docopt import docopt
+from pysqlcipher3 import dbapi2 as sqlcipher
 from sqlalchemy import create_engine, Column, UnicodeText
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -28,7 +29,7 @@ def main():
     password = getpass(prompt='Database password: ')
     engine = create_engine(
         'sqlite+pysqlcipher://:{password}@/{database}'.format(
-            database=file, password=password))
+            database=file, password=password), module=sqlcipher)
     session = sessionmaker(bind=engine)()
     if arguments['show']:
         show(session)
