@@ -1,4 +1,4 @@
-
+import sys
 from unittest.mock import patch
 
 from diary import main
