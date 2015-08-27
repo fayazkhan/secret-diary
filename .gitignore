@@ -3,5 +3,6 @@ coverage.xml
 *.db
 *.egg
 *.egg-info
+.noseids
 __pycache__
 *~
