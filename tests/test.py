@@ -1,9 +1,8 @@
-import sys
 from unittest.mock import Mock, patch
 
 import arrow
 
-from diary import create_entry, Entry, main, show, write_from_buffer
+from diary import create_entry, Entry, show, write_from_buffer
 
 
 def test_show():
