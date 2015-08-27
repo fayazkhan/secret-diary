@@ -2,7 +2,8 @@ from unittest.mock import Mock, patch
 
 import arrow
 
-from diary import create_entry, Entry, show, write_from_buffer
+from diary import create_entry, Entry
+from diary.cli import show, write_from_buffer
 
 
 def test_show():
@@ -10,7 +11,7 @@ def test_show():
     time = arrow.now()
     session = Mock(query=Mock(return_value=[Entry(
         updated=time, content=content)]))
-    with patch('diary.display_row') as display_row:
+    with patch('diary.cli.display_row') as display_row:
         show(session)
     display_row.assert_called_once_with(time.humanize(), content)
 
