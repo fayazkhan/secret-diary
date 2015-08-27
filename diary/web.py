@@ -3,4 +3,6 @@ from flask_admin import Admin
 
 
 def application_factory():
-    pass
+    application = Flask(__name__)
+    Admin(application)
+    return application
