@@ -4,10 +4,10 @@ from unittest.mock import patch
 from diary import main
 
 
-@patch('diary.docopt', return_value={'<file>': 'test.db', 'show': True})
-@patch('diary.getpass', return_value='password')
-@patch('diary.create_database_session')
-@patch('diary.show')
+@patch('diary.cli.docopt', return_value={'<file>': 'test.db', 'show': True})
+@patch('diary.cli.getpass', return_value='password')
+@patch('diary.cli.create_database_session')
+@patch('diary.cli.show')
 def test_main_show(show, create_database_session, *_):
     session = create_database_session.return_value
     main()
@@ -19,7 +19,7 @@ def test_main_show(show, create_database_session, *_):
     '<file>': 'test.db', 'show': False,
     'write': True, '--create': False, '--message': None})
 @patch('diary.cli.getpass', return_value='password')
-@patch('diary.diary.create_database_session')
+@patch('diary.cli.create_database_session')
 @patch('diary.cli.write_from_buffer')
 def test_main_write_from_buffer(write_from_buffer,
                                 create_database_session, *_):

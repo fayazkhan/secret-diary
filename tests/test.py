@@ -28,6 +28,6 @@ def test_write_from_buffer():
     session = Mock()
     buffer = ['hello', 'world']
     entry = Entry()
-    with patch('diary.create_entry', return_value=entry):
+    with patch('diary.cli.create_entry', return_value=entry):
         write_from_buffer(session, buffer)
     assert entry.content == 'helloworld'
