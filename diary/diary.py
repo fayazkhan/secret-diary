@@ -1,3 +1,4 @@
+import arrow
 from sqlalchemy_utils import ArrowType, force_instant_defaults
 from pysqlcipher3 import dbapi2 as sqlcipher
 from sqlalchemy import create_engine, Column, UnicodeText

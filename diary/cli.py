@@ -16,7 +16,7 @@ import sys
 import arrow
 from docopt import docopt
 
-from diary import create_entry, create_database_session, Base
+from diary import Base, create_entry, create_database_session, Entry
 
 
 def main():
