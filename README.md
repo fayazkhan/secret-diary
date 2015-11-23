@@ -1,4 +1,6 @@
 # secret-diary
+[![Requirements Status](https://requires.io/github/fayazkhan/secret-diary/requirements.svg?branch=master)](https://requires.io/github/fayazkhan/secret-diary/requirements/?branch=master)
+
 A secure diary app
 
 Usage:
