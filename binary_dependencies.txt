@@ -1,1 +1,4 @@
+python3-dev
+libsqlite3-dev
+libsqlcipher-dev
 libyaml-dev
