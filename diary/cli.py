@@ -16,7 +16,8 @@ import sys
 import arrow
 from docopt import docopt
 
-from diary import Base, create_entry, create_database_session, Entry
+from diary import (
+    application_factory, Base, create_entry, create_database_session, Entry)
 
 
 def main():
@@ -33,6 +34,9 @@ def main():
             create_entry(session, message=arguments['--message'])
         else:
             write_from_buffer(session, sys.stdin)
+    elif arguments['server']:
+        app = application_factory()
+        app.run()
 
 
 def write_from_buffer(session, buffer):
