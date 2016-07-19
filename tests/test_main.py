@@ -26,3 +26,15 @@ def test_main_write_from_buffer(write_from_buffer,
     session = create_database_session.return_value
     main()
     write_from_buffer.assert_called_once_with(session, sys.stdin)
+
+
+@patch('diary.cli.docopt', return_value={
+    '<file>': 'test.db', 'show': False,
+    'write': False, 'server': True})
+@patch('diary.cli.getpass', return_value='password')
+@patch('diary.cli.create_database_session')
+@patch('diary.cli.application_factory')
+def test_main_run_server(application_factory, *_):
+    app = application_factory.return_value
+    main()
+    app.run.assert_called_once_with()
