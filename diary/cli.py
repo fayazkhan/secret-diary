@@ -19,6 +19,7 @@
 Usage:
   diary show <file>
   diary write <file> [--message=<message>] [--create]
+  diary server <file>
 
 Options:
   -h --help                       Show this screen.

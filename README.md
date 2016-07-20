@@ -7,6 +7,7 @@ A secure diary app
 Usage:
   diary.py show <file>
   diary.py write <file> [--message=<message>] [--create]
+  diary server <file>
 
 Options:
   -h --help                       Show this screen.
