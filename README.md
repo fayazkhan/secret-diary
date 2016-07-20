@@ -1,5 +1,6 @@
 # secret-diary
-[![Requirements Status](https://requires.io/github/fayazkhan/secret-diary/requirements.svg?branch=master)](https://requires.io/github/fayazkhan/secret-diary/requirements/?branch=master) [![Build Status](https://travis-ci.org/fayazkhan/secret-diary.svg?branch=master)](https://travis-ci.org/fayazkhan/secret-diary)
+[![Requirements Status](https://requires.io/github/fayazkhan/secret-diary/requirements.svg?branch=master)](https://requires.io/github/fayazkhan/secret-diary/requirements/?branch=master) [![Build Status](https://travis-ci.org/fayazkhan/secret-diary.svg?branch=master)](https://travis-ci.org/fayazkhan/secret-diary) [![Coverage Status](https://coveralls.io/repos/github/fayazkhan/secret-diary/badge.svg)](https://coveralls.io/github/fayazkhan/secret-diary)
+
 
 A secure diary app
 
